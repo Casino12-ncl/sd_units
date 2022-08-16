@@ -4,9 +4,6 @@
     {assign var="id" value=0}
 {/if}
 
-
-
-
 {capture name="mainbox"}
 
 <form action="{""|fn_url}" method="post" class="form-horizontal form-edit " name="banners_form" enctype="multipart/form-data">
@@ -23,8 +20,7 @@
                  size="25" 
                  class="input-large" />
                 </div>
-            </div>         
-          
+            </div>                   
 
                 <div class="control-group">
                     <label class="control-label">{__("boss")}</label>

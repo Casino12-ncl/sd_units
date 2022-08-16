@@ -1,7 +1,7 @@
 <?php
-
+use Tygh\Languages\Languages;
 use Tygh\Registry;
-use Tygh\Languages;
+use Tygh\Tygh;
 
 function fn_get_slave_data($unit_id=0, $lang_code = CART_LANGUAGE)
 {

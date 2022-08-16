@@ -1,10 +1,7 @@
-
 <?php
-
 
 use Tygh\Registry;
 use Tygh\Tygh;
-
 
 defined('BOOTSTRAP') or die('Access denied');
 
@@ -89,4 +86,3 @@ if($mode =='manage_units') {
     Tygh::$app['view']->assign('units', $units);
     Tygh::$app['view']->assign('search', $search);
 }
-
