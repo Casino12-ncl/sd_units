@@ -154,10 +154,3 @@ if (!empty($unit_id)) {
     db_query('DELETE FROM ?:unit_descriptions WHERE unit_id = ?i', $unit_id);
 }
 }
-// $boss_info = fn_get_user_short_info($unit_data['user_id']);
-// $workers_info = db_get_fields("SELECT user_id 
-//                 FROM ?:users 
-//                 WHERE user_id IN(?n) ",
-//                 explode ('.', $unit_data['slave_id']));
-
-// list($workers_info, $search) = fn_get_users($params, Registry::get('settings.Appearance.products_elements_per_page'), CART_LANGUAGE);
