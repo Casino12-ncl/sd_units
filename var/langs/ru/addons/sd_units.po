@@ -13,5 +13,5 @@ msgid "Allows to add units."
 msgstr "Добавление отделов"
 
 msgctxt "SettingsSections::sd_units.units"
-msgid "Units"
+msgid "units"
 msgstr "Отделы"

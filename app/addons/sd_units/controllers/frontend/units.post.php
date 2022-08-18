@@ -1,6 +1,7 @@
 <?php
 
 use Tygh\Registry;
+use Tygh\Tygh;
 
 if (!defined('BOOTSTRAP')) { die('Access denied'); }
 
@@ -11,7 +12,6 @@ if (!defined('BOOTSTRAP')) { die('Access denied'); }
 
 
 if ($mode == 'units'){    
-  
     $_REQUEST['unit_id'] = empty($_REQUEST['unit_id']) ? 0 : $_REQUEST['unit_id'];
 
     Tygh::$app['session']['continue_url'] = "units.units";
