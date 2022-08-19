@@ -1,0 +1,17 @@
+msgid ""
+msgstr "Project-Id-Version: tygh\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: Russian\n"
+"Language: ru_RU\n"
+
+msgctxt "Addons::name::sd_units"
+msgid "units"
+msgstr "Отделы"
+
+msgctxt "Addons::description::sd_units"
+msgid "Allows to add units."
+msgstr "Добавление отделов"
+
+msgctxt "SettingsSections::sd_units.units"
+msgid "units"
+msgstr "Отделы"
