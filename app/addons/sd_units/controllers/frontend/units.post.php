@@ -52,7 +52,7 @@ if ($mode === 'unit')
     Tygh::$app['view']->assign('user_data', $unit_data);
     Tygh::$app['view']->assign('unit_head_data', $unit_head_data);
     
-    fn_add_breadcrumb("Отделы", $unit_data['unit']);
+    fn_add_breadcrumb(__('units'), $unit_data['unit']);
     
     $params = $_REQUEST;
     $params['extend'] = ['units', 'description'];
