@@ -122,7 +122,7 @@
 {/capture}
 
 {include file="common/mainbox.tpl"
-    title=($id) ? $unit_data.banner : __('add_new_unit')
+    title=($id) ? $unit_data.banner : _("Добавить новый отдел")
     content=$smarty.capture.mainbox
     buttons=$smarty.capture.buttons
     select_languages=true}

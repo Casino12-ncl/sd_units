@@ -30,11 +30,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
             $data = !empty($_REQUEST['unit_data']) ? $_REQUEST['unit_data'] : [];
             $unit_id = fn_update_unit($data, $unit_id);
             if (!empty($unit_id)) {
-                $suffix = ".update_unit?unit_id={$unit_id}";
+            $suffix = ".update_unit?unit_id={$unit_id}";
             } else $suffix = ".add_unit";
     
         } elseif($mode ==='update_units') {
-            if (!empty($_REQUEST['units_data'])) {
+            if (!empty($_REQUEST['units_data'])){
                 foreach ($_REQUEST['units_data'] as $unit_id => $data) {
                     fn_update_unit($data, $unit_id);
                 }
@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     
     return [CONTROLLER_STATUS_OK, 'units' . $suffix];
 }
-if($mode ==='update_unit' || $mode === 'add_unit') {
+    if($mode ==='update_unit' || $mode === 'add_unit') {
        
         $unit_id = !empty($_REQUEST['unit_id']) ? $_REQUEST['unit_id'] : 0;
         $unit_data = fn_get_unit_data($unit_id, DESCR_SL);
@@ -68,11 +68,14 @@ if($mode ==='update_unit' || $mode === 'add_unit') {
     }
     if ($mode='picker'){   
 
-        Tygh::$app['view']->assign([    
-            'unit_data' => $unit_data,
-            'boss_info' =>   !empty($unit_data['user_id']) ? fn_get_user_short_info($unit_data['user_id'], DESCR_SL) : [],
-            'worker_info' => !empty($unit_data['user_id']) ? fn_get_user_short_info($unit_data['user_id'], DESCR_SL) : [],       
-        ]);    
+    Tygh::$app['view']->assign([
+    
+    'unit_data' => $unit_data,
+    'boss_info' =>   !empty($unit_data['user_id']) ? fn_get_user_short_info($unit_data['user_id'], DESCR_SL) : [],
+    'worker_info' => !empty($unit_data['user_id']) ? fn_get_user_short_info($unit_data['user_id'], DESCR_SL) : [],
+    
+    
+]);    
     }
 }
     
