@@ -27,7 +27,7 @@
 {capture name="simple_search"}
 {$extra nofilter}
 <div class="sidebar-field">
-    <label >{_("Отдел")}</label>
+    <label >{__("units")}</label>
     <div class="break">
         <input type="text" name="unit" id="unit" value="{$search.unit}" />
     </div>
