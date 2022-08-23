@@ -10,7 +10,7 @@ if ($mode == 'units'){
 
     Tygh::$app['session']['continue_url'] = "units.units";
 
-    $unit_data = fn_get_unit_data($_REQUEST['unit_id'], CART_LANGUAGE, '*', true, false, $preview);
+    $unit_data = fn_get_unit_data($_REQUEST['unit_id'], CART_LANGUAGE);
     $params = $_REQUEST;   
     if ($items_per_page = fn_change_session_param(Tygh::$app['session'], $_REQUEST, 'items_per_page')) {
         $params['items_per_page'] = $items_per_page;        
@@ -38,7 +38,7 @@ if ($mode == 'units'){
         Tygh::$app['view']->assign('page_title', $unit_data['page_title']);  
     }
     // [Breadcrumbs]
-    fn_add_breadcrumb("Отделы");
+    fn_add_breadcrumb(__('units'));
 } 
 if ($mode === 'unit') 
 {
@@ -53,10 +53,10 @@ if ($mode === 'unit')
     Tygh::$app['view']->assign('user_data', $unit_data);
     Tygh::$app['view']->assign('unit_head_data', $unit_head_data);
     
-    fn_add_breadcrumb("Отделы", $unit_data['unit']);
+    fn_add_breadcrumb(__('units'), $unit_data['unit']);
     
     $params = $_REQUEST;
-    $params['extend'] = array('units', 'description');
+    $params['extend'] = ['units', 'description'];
     $params['items_ids'] = !empty($unit_data['users']) ? implode (',', $unit_data['users']) : -1;
 
 }
