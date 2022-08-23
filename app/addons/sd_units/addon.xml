@@ -14,7 +14,7 @@
                 timestamp INT(11) unsigned NOT NULL DEFAULT '0',
                 upd_timestamp INT(11) unsigned NOT NULL DEFAULT '0',
                 user_id INT(11) unsigned NOT NULL DEFAULT '0',
-                slave_id INT(255) unsigned NOT NULL DEFAULT '0',
+                slave_id varchar(255) NOT NULL DEFAULT '',
                 KEY (user_id),
                 PRIMARY KEY (unit_id)
             ) ENGINE=InnoDB DEFAULT CHARSET=utf8

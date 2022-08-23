@@ -47,9 +47,8 @@ if ($mode === 'unit')
     $unit_head_data = [];
     $unit_id = !empty($_REQUEST['unit_id']) ? $_REQUEST['unit_id'] : 0;
     $unit_data = fn_get_slave_data($unit_id, CART_LANGUAGE);
-    $unit_head_data = fn_get_unit_data($unit_id, CART_LANGUAGE);
-    
-    //fn_print_die($unit_head_data);
+    $unit_head_data = fn_get_unit_data($unit_id, CART_LANGUAGE);    
+ 
     Tygh::$app['view']->assign('user_data', $unit_data);
     Tygh::$app['view']->assign('unit_head_data', $unit_head_data);
     

@@ -3,11 +3,10 @@ use Tygh\Languages\Languages;
 use Tygh\Registry;
 use Tygh\Tygh;
 
-function fn_get_slave_data($unit_id=0, $lang_code = CART_LANGUAGE)
+function fn_get_slave_data($unit_id=0)
 {
    
-    $slave_id = db_get_field("SELECT slave_id FROM ?:units WHERE unit_id = ?i", $unit_id);
-    
+    $slave_id = db_get_field("SELECT slave_id FROM ?:units WHERE unit_id = ?i", $unit_id);    
    
     $user_data= db_get_array('SELECT firstname, lastname, email FROM ?:users WHERE user_id IN(?p)', $slave_id);
    
@@ -138,7 +137,7 @@ function fn_update_unit($data, $unit_id, $lang_code = DESCR_SL)
     } else {
         $unit_id = $data['unit_id'] = db_replace_into('units', $data);
 
-        foreach (Languages::getAll() as $data['lang_code'] => $v) {
+        foreach (Languages::getAll() as $data['lang_code']) {
             db_query("REPLACE INTO ?:unit_descriptions ?e", $data);
         }
     }
@@ -150,7 +149,7 @@ function fn_update_unit($data, $unit_id, $lang_code = DESCR_SL)
 function fn_delete_unit($unit_id)
 {
 if (!empty($unit_id)) {
-    $res = db_query('DELETE FROM ?:units WHERE unit_id = ?i', $unit_id);
+    db_query('DELETE FROM ?:units WHERE unit_id = ?i', $unit_id);
     db_query('DELETE FROM ?:unit_descriptions WHERE unit_id = ?i', $unit_id);
 }
 }
