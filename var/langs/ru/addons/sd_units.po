@@ -1,0 +1,54 @@
+msgid ""
+msgstr "Project-Id-Version: tygh\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: Russian\n"
+"Language: ru_RU\n"
+
+msgctxt "Addons::name::sd_units"
+msgid "units"
+msgstr "Отделы"
+
+msgctxt "Addons::description::sd_units"
+msgid "Allows to add units."
+msgstr "Добавление отделов"
+
+msgctxt "SettingsSections::sd_units.units"
+msgid "units"
+msgstr "Отделы"
+
+msgctxt "Languages::boss"
+msgid "boss"
+msgstr "Руководитель"
+
+msgctxt "Languages::sd_units.units"
+msgid "units"
+msgstr "Отделы"
+
+msgctxt "Languages::units"
+msgid "units"
+msgstr "Отделы"
+
+msgctxt "Languages::add_admins_from_users"
+msgid "add boss"
+msgstr "ДОбавить руководителя"
+
+msgctxt "Languages::add_workers_from_users"
+msgid "add worker"
+msgstr "Добавить сотрудников"
+ 
+msgctxt "Languages::worker"
+msgid "List of workers"
+msgstr "Список сотрудников"
+
+msgctxt "Languages::delete_units"
+msgid "delete_units"
+msgstr "Удалить выбранные отделы"
+
+msgctxt "Languages::logo"
+msgid "logo"
+msgstr "Логотип"
+
+msgctxt "Languages::add_new_unit"
+msgid "new_unit"
+msgstr "Добавить новый отдел"
+
