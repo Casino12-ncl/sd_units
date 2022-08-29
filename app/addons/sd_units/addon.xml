@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<addon scheme="3.0">
+    <id>sd_units</id>
+    <version>4.15.1.0</version>   
+    <priority>1200</priority>
+    <position>10</position>
+    <status>active</status>
+    <has_icon>Y</has_icon>
+    <queries>
+        <item for="install">
+            CREATE TABLE IF NOT EXISTS cscart_units (
+                unit_id INT(11) unsigned NOT NULL auto_increment,
+                status VARCHAR(1) NOT NULL DEFAULT 'A',
+                timestamp INT(11) unsigned NOT NULL DEFAULT '0',
+                upd_timestamp INT(11) unsigned NOT NULL DEFAULT '0',
+                user_id INT(11) unsigned NOT NULL DEFAULT '0',
+                slave_id INT(255) unsigned NOT NULL DEFAULT '0',
+                KEY (user_id),
+                PRIMARY KEY (unit_id)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+        </item>
+        <item for="install">
+            CREATE TABLE IF NOT EXISTS cscart_unit_descriptions (
+                unit_id INT(11) unsigned NOT NULL DEFAULT '0',
+                lang_code CHAR(2) NOT NULL DEFAULT '',
+                unit VARCHAR(255) NOT NULL DEFAULT '',
+                description TEXT NULL,
+                PRIMARY KEY (unit_id, lang_code)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+        </item>
+        <item for="uninstall"> DROP TABLE IF EXISTS ?:units</item>
+        <item for="uninstall"> DROP TABLE IF EXISTS ?:unit_descriptions</item>
+    </queries>
+</addon>
